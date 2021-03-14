@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://thietbiketnoi.com/wp-content/uploads/2020/01/tong-hop-hinh-nen-background-vector-designer-dep-do-phan-giai-fhd-2k-4k-moi-nhat-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.header{
+    display:inline-flex;
+    background-image: linear-gradient(to right, rgb(66, 68, 160), #333);
+    width: 1707px;
+    height: 40px;
+}
+
+.Logout,.Post{
+    position:relative;
+    left:1100px;
+    margin-top: 10px;
+    margin-left: 50px;
+    color: white;
+    font-size: 20px;
+}
+.Logout:hover,.Post:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.container{
+    position: relative;
+    top: 0px;
+    width: 1000px;
+    height: 0px;
+    margin-top: 10px;
+}
+
+.footer{
+    list-style-type: none;
+    display:list-item;
+    position: relative;
+    top: 730px;
+    font-size: 30px;
+    color: #fff;
+    padding-left: 20px ;
+}
+
+.postBox{
+    background-color: #fff;
+    overflow-y: auto;
+    width: 1650px;
+    height: 700px;
+    position:relative;
+    top :0;
+    left:30px;
+}
+
+
+.postContainer{
+    position: relative;
+    background-color: #eee;
+    top :0;
+    left: 30px;
+    width: 1650px;
+    height: 700px;
+}
+
+#input_title{
+    display:block;
+    position: absolute;
+    top: 10px;
+    left:0px;
+    width: 1600px;
+    height: 30px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+#input_category{
+    display:block;
+    position: absolute;
+    width: 1600px;
+    height: 30px;
+    top:50px;
+    left: 0px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#input_content{
+    position: absolute;
+    width: 1600px;
+    height: 550px;
+    top:90px;
+    left: 0px;
+    margin-left: 25px;
+    margin-top: 10px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+#post{
+    width: 80px;
+    height: 30px;
+    display:block;
+    position: absolute;
+    top:660px;
+    left: 1545px;
+}

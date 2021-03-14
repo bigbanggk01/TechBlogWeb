@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://thietbiketnoi.com/wp-content/uploads/2020/01/tong-hop-hinh-nen-background-vector-designer-dep-do-phan-giai-fhd-2k-4k-moi-nhat-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header1,.header2{
+    position:relative;
+    margin-top: 20px;
+    margin-left: 1600px;
+    color: white;
+    font-size: 30px;
+}
+
+.header4{
+    position:relative;
+    margin-top: 20px;
+    margin-left: 1600px;
+    color: white;
+    font-size: 30px;
+}
+.header1:hover,.header2:hover{
+   
+    color:orange;
+    cursor: pointer;
+}
+
+.container{
+    position: relative;
+    top: 0px;
+    width: 700px;
+    height: 0px;
+}
+
+.modal{
+    position: absolute;
+    margin: 0 auto;
+    top:0%;
+    left: 100%;
+    display: block;
+    justify-content: center;
+    background-color: #333;
+    border:#333 10px solid;
+    border-radius: 10px;
+    width: 290px;
+    height:300px;
+}
+.form{
+    display:inline-block;   
+    padding-top: 10px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+
+.input{
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    width: 250px;
+}
+
+.switch{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    margin-left: 10px;
+    width: 250px;
+    padding-bottom: 10px;
+}
+
+.footer{
+    list-style-type: none;
+    display:list-item;
+    position: relative;
+    top: 600px;
+    font-size: 30px;
+    color: #fff;
+    padding-left: 20px ;
+}
