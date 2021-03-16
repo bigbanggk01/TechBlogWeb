@@ -13,6 +13,7 @@
 </head>
 <body>
     <div class="header">
+        <h1 class="header0">UIT Tech Blog Professional Web</h1>
         <div class="header1"><i class="fa fa-user";"></i></div>
         <div class="header2"><i class="fa fa-phone"></i></div>
         <div class="header2"><i class="fa fa-play"></i></div>

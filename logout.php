@@ -16,5 +16,6 @@
             echo('OK_Logout_good');
         }
     }    
+    session_destroy();
     mysqli_close($conn);
 ?>

@@ -8,29 +8,29 @@
     <link rel="stylesheet" href="blog.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="script/blog.js"></script>
     <title>Login with php</title>
 </head>
 <body>
     <div class="header">  
-        <a class="Post">Post some blogs</a>
-        <a class="Logout">Logout</a>
+        <div class="Post">Post some blogs</div>
+        <div class="Logout">Logout</div>
     </div>
 
-    <div class="container">
+    <div class="container" >
         <div class="postBox">
-            <a href="http://">....</a>
+            <h1 class="tTable">Posts of members</h1>
+            <button class="refresh">Load posts</button>
+            <div id="data"></div>
         </div>
         <div class="postContainer" style="display:none">
-            <form id="post_form" method="post" action="">
+            <form id="post_form" method="post" action="<?php echo htmlspecialchars('upload.php')?>">
                 <div class="inputContainer">
-                    <input class="input" type="text" name="title" id="input_title" placeholder="Title">
-                    <input class="input" type="input" name="pass" id="input_category" placeholder="Category">
-                    <div class="input" type="input" name="user" id="input_content">
-                    </div>
-                    <button class="input" type="button" id="post">Post</button>
+                    <input class="inputContainer" id="input_title" type="text" name="title" placeholder="Title">
+                    <input class="inputContainer" id="input_category" type="text" name="category"  placeholder="Category">
+                    <textarea class="inputContainer" id="input_content" type="text" name="content" rows = "5" cols = "60" name = "description"></textarea>
                 </div>
             </form>
+            <button id="post" class="button123" type="button">Post</button>
         </div>
     </div>
     
@@ -43,5 +43,8 @@
         <li>                      </li>
         <li>0966286837</li>
     </div>
+    
 </body>
 </html>
+<script type="text/javascript" src="script/blog.js"></script>
+<script type="text/javascript" src="script/blog2.js"></script>

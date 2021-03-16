@@ -10,7 +10,14 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.header0{
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
 
+
+}
 .header1,.header2{
     position:relative;
     margin-top: 20px;
