@@ -2,6 +2,7 @@
     include_once 'connect.php';
     session_start();
     $conn= mysqli_connect($db_hostname, $db_user, $db_pass, $db_name);
+    
     $user = $_POST['user'];
     $pass = $_POST['pass'];
 
@@ -14,8 +15,8 @@
         //$sql = "SELECT * FROM accounts";
         $result = mysqli_query($conn,$sql);
         //$json_array = array();
-        $row = mysqli_fetch_array($result);
-        if (mysqli_num_rows($result)!=0){
+        $row = mysqli_fetch_assoc($result);
+        if ($row['user']!=''){
             $sql = "UPDATE accounts SET online = 1 WHERE user='$user'";
         }
         if(mysqli_query($conn,$sql)){

@@ -20,7 +20,6 @@
         <div class="postBox">
             <h1 class="tTable">Posts of members</h1>
             <button class="refresh">Load posts</button>
-            <div id="data"></div>
         </div>
         <div class="postContainer" style="display:none">
             <form id="post_form" method="post" action="<?php echo htmlspecialchars('upload.php')?>">

@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    $_SESSION['title'] = $_POST["title"];   
     $title =  $_POST["title"];
     include_once 'connect.php';
     $conn= mysqli_connect($db_hostname, $db_user, $db_pass, $db_name);

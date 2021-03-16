@@ -17,7 +17,11 @@
             </style>');
             echo('
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-                
+            <script>
+                $(document).ready(function(){    
+                    $(".postComment").hide();
+                })    
+            </script>
                 <table style="width:100%">
                 <tr>
                     <th>author</th>
@@ -38,7 +42,7 @@
 
             echo('
                 <script>
-                    $(".postComment").hide();
+                    
                     $(document).ready(function(){
                         var title = "'.$row["title"].'";   
                         $(".'.$row['title'].'").mouseup(function(){
@@ -106,10 +110,10 @@
                                 $(".postCommentButton").css({
                                     "position":"relative",
                                     "overflow-y": "auto",
-                                    "top":"-10px",
+                                    "top":"-20px",
                                     "left":"0px", 
                                     "width": "70px",
-                                    "height": "40px",
+                                    "height": "50px",
                                     "display":"inline-block",
                                 });
                             });
@@ -141,10 +145,30 @@
 
                             </textarea>
                             <button class="postCommentButton">
+                                Send
                             </button>
                     </div>
                 </div>
+                <script>
+                    $(document).ready(function(){
+                        $(".postCommentButton").mouseup(function(){
+                            $.post("upLoadComment.php",{
+                                    comment:$(".commentSide").val()
+                                },function(result){
+                                    alert(result);
+                            });
+                        })    
+                    })
+                </script>
             ');
             
     mysqli_close($conn);
 ?>
+
+<!-- $.post("upLoadComment.php",{
+
+comment:"$(".commentSide").val()",
+
+},function(result=="Uploaded"){
+alert("Please refresh to see your comment");
+}); -->
