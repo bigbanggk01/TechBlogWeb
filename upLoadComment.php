@@ -8,8 +8,6 @@
     session_start();
 
     $title = $_SESSION['title'];
-    
-    echo($title);
 
     if(isset($_SESSION['user'])){
         $user = $_SESSION['user'];
@@ -35,13 +33,26 @@
             $sql = "INSERT INTO comments(who_id, post_id, comment) VALUES ('$acc_id','$post_id','$comment')";
 
             mysqli_query($conn,$sql);
-            echo('thanh cong');
         }    
     }
     else{
-        echo('login before!');
+        if($conn->connect_error){
+            die("Connection failed".$conn->connect_error);
+        }
+        else{
+            $sql = "SELECT post_ID 
+                    FROM posts 
+                    WHERE title='$title'";
+
+            $result = mysqli_query($conn,$sql);
+            $post_id = mysqli_fetch_assoc($result);
+            $post_id = $post_id['post_ID'];
+
+            $sql = "INSERT INTO comments(who_id, post_id, comment) VALUES ('1','$post_id','$comment')";
+
+            mysqli_query($conn,$sql);
+        }
     }
     
     mysqli_close($conn);
-
 ?>

@@ -4,8 +4,8 @@ $('.Post').mouseup(function(){
 })
 
 $('#post').mouseup(function(){
-    var title = $('#input_title').val();
-    var category = $('#input_category').val();
+    var title = $('#input_title').val().split(' ').join('_');
+    var category = $('#input_category').val().split(' ').join('_');
     var content = $('#input_content').val();
     if(title !='' && category!=''&& content !=''){
         $.post("upload.php",{

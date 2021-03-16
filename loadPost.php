@@ -29,7 +29,7 @@
                     <th>title</th>
                 </tr>
             ');
-
+    
     if(mysqli_num_rows($result)>0){
         while($row = mysqli_fetch_assoc($result)){
             echo('
@@ -154,21 +154,16 @@
                         $(".postCommentButton").mouseup(function(){
                             $.post("upLoadComment.php",{
                                     comment:$(".commentSide").val()
-                                },function(result){
-                                    alert(result);
+                                },function(){
+                                    $(".commentX").load("loadComment.php",{});
                             });
-                        })    
+                            $(".commentSide").val("");
+                            
+                        })
+                        
                     })
                 </script>
             ');
             
     mysqli_close($conn);
 ?>
-
-<!-- $.post("upLoadComment.php",{
-
-comment:"$(".commentSide").val()",
-
-},function(result=="Uploaded"){
-alert("Please refresh to see your comment");
-}); -->

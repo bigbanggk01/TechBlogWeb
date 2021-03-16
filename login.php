@@ -12,9 +12,9 @@
 
     else{
         $sql = "SELECT * FROM accounts WHERE user='$user' AND pass='$pass'";
-        //$sql = "SELECT * FROM accounts";
+        
         $result = mysqli_query($conn,$sql);
-        //$json_array = array();
+        
         $row = mysqli_fetch_assoc($result);
         if ($row['user']!=''){
             $sql = "UPDATE accounts SET online = 1 WHERE user='$user'";

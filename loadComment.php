@@ -1,5 +1,8 @@
 <?php
-    $title =  $_POST["title"];
+    session_start();
+    $title = $_SESSION['title'];
+    
+
     include_once 'connect.php';
     $conn= mysqli_connect($db_hostname, $db_user, $db_pass, $db_name);
     
@@ -24,7 +27,6 @@
                 echo ('<br>');
             }
         }
-        
     }
     mysqli_close($conn);
 ?>
