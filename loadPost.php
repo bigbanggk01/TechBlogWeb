@@ -2,7 +2,7 @@
 include_once 'connect.php';
 
 $conn= mysqli_connect($db_hostname, $db_user, $db_pass, $db_name);
-$sql= "SELECT author_ID, category, title FROM posts";
+$sql= "SELECT author_ID, category, title FROM posts WHERE 1";
 
 $result = mysqli_query($conn,$sql);
 
@@ -35,15 +35,24 @@ if(mysqli_num_rows($result)>0){
         echo('
             <script>
                 $(document).ready(function(){
-                    var title = "'.$row["title"].'";
-                         
+                    var title = "'.$row["title"].'";   
                     $(".'.$row['title'].'").mouseup(function(){
+                        $("table").hide();
                         $.post("loadContent.php", 
                         {
                             title: title,
                         },
                         function(result){
                             $(".dataX").html(result);
+                            $(".dataX").css({"border-color": "#333", 
+                                "position":"relative",
+                                "left":"24px",
+                                "border-width":"1px", 
+                                "border-style":"solid",
+                                "width": "1600px",
+                                "height": "600px",
+                                "overflow-y": "scroll",
+                            });
                         });
                     })
                 })

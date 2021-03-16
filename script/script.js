@@ -2,7 +2,9 @@ $(document).ready(function(){
     $('.header1').click(function(){
         $('.modal').show();
     })
-
+    $('.header3').click(function(){
+        window.location.href = "blog.php";
+    })
     $('#Reg').mouseup(function(){
         var user = $('#reg_user').val();
         var pass = $('#reg_pass').val();

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="script/script.js"></script>
@@ -14,9 +14,9 @@
 <body>
     <div class="header">
         <h1 class="header0">UIT Tech Blog Professional Web</h1>
-        <div class="header1"><i class="fa fa-user";"></i></div>
+        <div class="header1"><i class="fa fa-user"></i></div>
         <div class="header2"><i class="fa fa-phone"></i></div>
-        <div class="header2"><i class="fa fa-play"></i></div>
+        <div class="header3"><i class="fa fa-play"></i></div>
     </div>
 
     <div class="container">
