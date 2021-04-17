@@ -26,7 +26,7 @@
                 <form id="log_form" method="post" action="<?php echo htmlspecialchars('login.php')?>">
                     <div class="input">
                         <input class="input" type="text" name="user" id="log_user" placeholder="Username"><br>
-                        <input class="input" type="text" name="pass" id="log_pass"placeholder="Password"><br>
+                        <input class="input" type="password" name="pass" id="log_pass"placeholder="Password"><br>
                         <button class="input" type="button" id="Login">Login</button>
                     </div>
                 </form>
